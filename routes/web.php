@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/contact', function(){
+//     return view('contact');
+// });
+
+Route::view('/contact', 'contact', ['name' => 'Edi 1', 'phone' => '0889789237']);
+
+// Route::redirect('/contact', '/welcome-us');
+
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
